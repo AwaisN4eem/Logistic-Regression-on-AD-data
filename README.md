@@ -73,3 +73,36 @@ Fast and Efficient: It’s a relatively simple model, so it doesn’t require to
 We trained a logistic regression model to predict whether users would click on ads based on their behavior (e.g., time spent on site) and demographics (e.g., age, income).
 The model performed well, with an accuracy of nearly 90%, meaning it can predict correctly in 9 out of 10 cases.
 This model can now be used to predict the likelihood of a user clicking on an ad, helping advertisers target their campaigns more effectively.
+
+**Confusion Matrix:**
+
+A confusion matrix is a way to evaluate the performance of a classification model. It shows how many predictions the model got correct and how many it got wrong by comparing the actual values (the true labels) to the predicted values (what the model predicted). The matrix is made up of four important numbers:
+
+**Breakdown of the confusion matrix:**
+
+True Positives (TP): These are cases where the model correctly predicted a positive outcome.
+In our case, it predicted that the person clicked on the ad, and they actually did.
+
+**True Negatives (TN)**: These are cases where the model correctly predicted a negative outcome.
+The model predicted that the person did not click on the ad, and they indeed didn't.
+
+**False Positives (FP) (also called a "Type I error"):** These are cases where the model predicted a positive outcome incorrectly.
+The model predicted that the person clicked on the ad, but they actually didn't. It's a "false alarm."
+
+**False Negatives (FN) (also called a "Type II error"):** These are cases where the model predicted a negative outcome incorrectly.
+The model predicted that the person didn’t click on the ad, but they actually did. It's a "missed opportunity."
+
+**Visualizing the Confusion Matrix:**
+The heatmap you saw represents these four numbers in a grid. The rows are the actual outcomes (whether the person clicked the ad or not), and the columns are the predicted outcomes (what the model thought would happen).
+
+Top left corner: True Negatives (TN) – when both the actual and predicted are "no click."
+Top right corner: False Positives (FP) – when the model incorrectly predicted "click."
+Bottom left corner: False Negatives (FN) – when the model incorrectly predicted "no click."
+Bottom right corner: True Positives (TP) – when both the actual and predicted are "click."
+
+**Why This Matters:**
+
+High TP and TN values show that the model is making correct predictions most of the time.
+Low FP and FN values are good because they indicate the model is making fewer mistakes.
+The model's accuracy gives you a sense of how well it’s performing overall, but the confusion matrix gives you a more detailed view of where the model is getting things right or wrong.
+This helps you understand not just how often the model is correct, but what kinds of errors it's making (missing positives or giving false alarms).
